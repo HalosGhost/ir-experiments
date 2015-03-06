@@ -7,8 +7,11 @@ As this repo is meant to be a way for me to learn the ropes, PRs adding examples
 To Do
 -----
 
-* FizzBuzz
-* Basic ``echo`` command
-* Basic ``cat`` command
-* ``hr`` (à la `hr <https://github.com/LuRsT/hr>`_)
-* BrainFuck++ compiler
+* [X] "Hello, World!"
+* [ ] FizzBuzz
+* [ ] Fibonacci Sequence Generator
+* [ ] Something that plays around with llvm's arbitrary-width integers
+* [ ] ``hr`` (à la `hr <https://github.com/LuRsT/hr>`_)
+* [ ] Basic ``echo`` command
+* [ ] Basic ``cat`` command
+* [ ] BrainFuck++ compiler (JIT?)
