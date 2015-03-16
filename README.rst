@@ -8,7 +8,7 @@ To Do
 -----
 
 * [X] "Hello, World!"
-* [ ] FizzBuzz
+* [X] FizzBuzz
 * [ ] Fibonacci Sequence Generator
 * [ ] Something that plays around with llvm's arbitrary-width integers
 * [ ] ``hr`` (à la `hr <https://github.com/LuRsT/hr>`_)

@@ -8,26 +8,26 @@ declare i32 @printf (i8* nocapture readonly, ...) nounwind
 
 define i32 @main () {
 
-    %cntr = alloca i8
-    store i8 1, i8* %cntr
+    %cntr = alloca i7
+    store i7 1, i7* %cntr
 
     br label %.loop_body
 
     .loop_body:
-        %c     = load i8* %cntr
-        %mod15 = urem i8 %c, 15
-        switch i8 %mod15, label %.loop_nfnb [ i8  0, label %.loop_fzbz
-                                              i8  5, label %.loop_buzz
-                                              i8 10, label %.loop_buzz
-                                              i8  3, label %.loop_fizz
-                                              i8  6, label %.loop_fizz
-                                              i8  9, label %.loop_fizz
-                                              i8 12, label %.loop_fizz ]
+        %c     = load i7* %cntr
+        %mod15 = urem i7 %c, 15
+        switch i7 %mod15, label %.loop_nfnb [ i7  0, label %.loop_fzbz
+                                              i7  5, label %.loop_buzz
+                                              i7 10, label %.loop_buzz
+                                              i7  3, label %.loop_fizz
+                                              i7  6, label %.loop_fizz
+                                              i7  9, label %.loop_fizz
+                                              i7 12, label %.loop_fizz ]
 
     .loop_update:
-        %cn = add nuw nsw i8 1, %c
-        store i8 %cn, i8* %cntr
-        %again = icmp ule i8 %cn, 100
+        %cn = add nuw nsw i7 1, %c
+        store i7 %cn, i7* %cntr
+        %again = icmp ule i7 %cn, 100
         br i1 %again, label %.loop_body, label %.loop_end
 
     .loop_fzbz:
@@ -43,7 +43,7 @@ define i32 @main () {
         br label %.loop_update
 
     .loop_nfnb:
-        call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([6 x i8]* @n3n5, i32 0, i32 0), i8 %c)
+        call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([6 x i8]* @n3n5, i32 0, i32 0), i7 %c)
         br label %.loop_update
 
     .loop_end:
