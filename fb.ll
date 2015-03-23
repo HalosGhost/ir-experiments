@@ -6,7 +6,7 @@
 
 declare i32 @printf (i8* nocapture readonly, ...) nounwind
 
-define i32 @main () {
+define i8 @main () {
 
     %cntr = alloca i7
     store i7 1, i7* %cntr
@@ -48,5 +48,5 @@ define i32 @main () {
 
     .loop_end:
         call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([2 x i8]* @nl, i32 0, i32 0))
-        ret i32 0
+        ret i8 0
 }
