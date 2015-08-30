@@ -1,7 +1,7 @@
 @fs = internal constant [6 x i8] c"%llu \00"
 
-declare i32 @printf (i8* nocapture readonly, ...) nounwind
-declare i32 @putchar (i32 nocapture readonly) nounwind
+declare i32 @printf (i8*, ...) nounwind
+declare i32 @putchar (i32) nounwind
 
 define   i8 @main (i32 %argc, i8** %argv) {
 
@@ -13,7 +13,7 @@ define   i8 @main (i32 %argc, i8** %argv) {
     ret i8 0
 }
 
-define void @fibs_seq (i7 nocapture readonly %n) nounwind {
+define void @fibs_seq (i7 %n) nounwind {
 
     %a = alloca i64
     %b = alloca i64
@@ -44,7 +44,7 @@ define void @fibs_seq (i7 nocapture readonly %n) nounwind {
         ret void
 }
 
-define i64 @fibs_idx (i7 nocapture readonly %n) nounwind {
+define i64 @fibs_idx (i7 %n) nounwind {
 
     %a = alloca i64
     %b = alloca i64
