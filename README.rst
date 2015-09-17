@@ -9,9 +9,9 @@ To Do
 
 * [X] "Hello, World!"
 * [X] FizzBuzz
-* [ ] Fibonacci Sequence Generator
+* [-] Fibonacci Sequence Generator
 * [ ] Something that plays around with llvm's arbitrary-width integers
 * [ ] ``hr`` (à la `hr <https://github.com/LuRsT/hr>`_)
 * [ ] Basic ``echo`` command
 * [ ] Basic ``cat`` command
-* [ ] BrainFuck++ compiler (JIT?)
+* [-] BrainFuck(++) compiler (JIT?)
