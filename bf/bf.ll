@@ -9,7 +9,9 @@ entry:
                                 i8 43, label %incbyt
                                 i8 45, label %decbyt
                                 i8 46, label %putbyt
-                                i8 44, label %getbyt ]
+                                i8 44, label %getbyt
+                                i8 91, label %lupbeg
+                                i8 93, label %lupend ]
 
 incptr:
     %0 = ptrtoint i8* %p to i64
@@ -45,6 +47,12 @@ getbyt:
     %13 = call i32 @getchar()
     %14 = trunc i32 %13 to i8
     store i8 %14, i8* %p
+    ret i8* %p
+
+lupbeg:
+    ret i8* %p
+
+lupend:
     ret i8* %p
 
 else:
